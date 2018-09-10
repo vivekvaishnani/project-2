@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mechanic World</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="styles/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="styles/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>M E C H A N I C || W O R L D</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto smooth-scroll">
+                    <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#best-features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#examples">Examples</a>
+                    </li>
+                </ul>
+                <!-- Links -->
+                <!-- Social Icon  -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                    <a class="nav-link"><button class="btn btn-warning">User Name</button></a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="intro" class="view">
+        <div class="mask rgba-black-strong">
+            <div class="container-fluid align-items-center justify-content-center mt-5 p-5">
+                <div class="row justify-content-center text-center">
+                    <div class="container justify-content-center">
+                        <div class="form-group">
+                            <form id="zip-form">
+                                <input type="zipcode" class="form-control" placeholder="Enter zipcode" id="zip">
+                                <small class="form-text text-muted">Enter Zip-code for available service area.</small>
+                                <button id="submit" class="btn btn-primary">Submit</button>
+                                <div class="infoBox white-text  text-muted"></div>
+                            </form>
+                            <hr><hr><hr>
+                        </div>
+                    </div>
+                    
+                    <div class="container mw-100  mt-5 p-5 invisible" id = "carModel" >
+                        <div class="card card-image" style="background-image: url(/img/car_makes/carModel.png)">
+                            <div class="text-white text-center py-1 px-1 ">
+                                <table class="table table-bordered ">
+                                    <tbody>
+                                        <tr valign="bottom">
+                                            <th class="text-monospace black">Year:</th>
+                                            <th class="text-monospace black">Make:</th>
+                                            <th class="text-monospace black">Model:</th>
+                                            <th class="text-monospace black">Trim:</th>
+                                        </tr>
+                                        <tr>
+                                            <td><select class = "form-control p-1" id="car-years" name="car-years"></select></td>
+                                            <td><select class = "form-control p-1" id="car-makes" name="car-makes"></select></td>
+                                            <td><select class = "form-control p-1" id="car-models" name="car-models"></select></td>
+                                            <td><select class = "form-control p-1" id="car-model-trims" name="car-model-trims"></select></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="userCarData" value="NEXT STEP" >NEXT STEP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="serviceTable" class="container">
+        <div> <h3> Please choose services for <span id="serviceMake"> </span> </h3></div>
+
+    </form>
+ 
+<div class="col-md-12 p-0">
+<div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+<div class="text-white py-5 px-4 my-5"> 
+        <h2 class="display-4 font-weight-bold white-text pt-5 mb-2 text-center">Appointment schedule</h2>
+         
+    <div class="container">
+        
+        <form action="" class="form-horizontal"  role="form">
+            <div class="form-group">
+                <label for="dtp_input2" class="col-md-2 control-label">Please select the day:</label>
+                <div  class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                <input id="date-info" class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                    <input type="hidden" id="dtp_input2" value="" /><br/>
+                <label for="dtp_input2" class="col-md-2 control-label">Please enter adress:</label>
+                <div  class="input-group date col-md-5">
+                    <input id="address-info" class = "form-control " id="address" name="address" type="text" placeholder="address" class="input-xlarge">
+                </div>
+                <label for="dtp_input2" class="col-md-2 control-label">City/Town:</label>
+                <div class="input-group date col-md-5">
+                    <input id="city-info" class = "form-control" id="city" name="city" type="text" placeholder="city" class="input-xlarge">
+                </div>
+                <label for="dtp_input2" class="col-md-2 control-label">State:</label>
+                <div class="input-group date col-md-5">
+                    <input id="state-info" class = "form-control" id="region" name="region" type="text" placeholder="state / province / region" class="input-xlarge">
+                </div>
+                <label for="dtp_input2" class="col-md-2 control-label">Phone number:</label>
+                <div class="input-group date col-md-5">
+                    <input id="phone-info" class = "form-control" id="phone" name="phone" type="text" placeholder="Phone number " class="input-xlarge">
+                </div>
+            </div> 
+            <button id="confirm" class="btn btn-primary p-4">Press to confirm your appointment</button>
+ 
+        </form>
+
+        <div class="container" id="summery">
+            <h2 id="date-display" ></h2>
+            <h2 id="date-display" ></h2>
+            <h2 id="date-display"></h2>
+            <h2 id="date-display"></h2>
+            <h2id="date-display"></h2>
+            <h2></h2>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="page-footer font-small unique-color-dark fixed-buttom p-0">
+    <div class="container  text-center text-md-left">
+        <h4 class="ui inverted header">About</h4>
+        <p>Mechanic World was created in 2018 by Vick, Avi, Vitalii and Ensarmu.</p>
+        <h4 class="ui inverted header">Contact</h4>
+        <p>For business inquiries, call (123)456-7890.</p>
+    </div>
+</footer>    
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/carInfo.js"></script>
+<script type="text/javascript" src="js/index-cars.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
+<script type="text/javascript">
+$('.form_date').datetimepicker({
+    language:  'fr',
+    weekStart: 1,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    forceParse: 0
+});</script>
+</body>
+
+</html>
