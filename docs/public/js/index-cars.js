@@ -55,6 +55,7 @@ $(document).ready(function () {
 //     console.log(data);
 //   });
 // }
+
 $("#userCarData").on("click", function (event) {
   // It helps to prevent from submitting traditional method of form 
   event.preventDefault();
